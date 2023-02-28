@@ -1,0 +1,40 @@
+.bread-crame{
+    height:50px;
+    margin:15px;
+    background-color:#E7E7FF;
+    color:#888BFF;
+    padding-top:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.box{
+    padding:30px 50px;
+    background-color: white;
+    color: black;
+}
+.submitbutton{
+    background-color:#E7E7FF;
+    color: #888BFF;
+}
+
+.imagesubmit::-webkit-file-upload-button{
+    background-color: #888BFF;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+}
+.data{
+    font-size: 15px;
+     align-items: center;
+}
+
+.subbox{
+    background-color:#E7E7FF;
+    color: #888BFF;
+    border-radius: 10px;
+    font-size: 20px;
+}
