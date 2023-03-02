@@ -2,3 +2,20 @@
 
 # HR Management Project
 ***
+
+### Feature of this project
+- CRU operation of Employee, Department and Company
+- Active and Inactive option of Employee, Department and Company
+
+
+
+***
+### Technology of this project
+- Laravel
+- HTML
+- CSS
+- Bootstrap-5
+- jQuery
+
+
+
