@@ -46,6 +46,20 @@
     color:#697a8d !important;
 }
 
+.dashboard_box{
+    background-color:#E7E7FF;
+    color: #888BFF;
+    border-radius: 10px;
+    border: 1px solid #888BFF ;
+}
+
+.dashboard_text{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
 /* .adminfont{
     font-size:20px;
     align-items: center;
