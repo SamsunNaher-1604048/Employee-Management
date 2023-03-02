@@ -1,23 +1,56 @@
-.bread-crame{
-    height:50px;
-    margin:15px;
-    background-color:#E7E7FF;
-    color:#888BFF;
-    padding-top:10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 20px;
+.box{
+    border-bottom: 2px solid  #888BFF;
+    margin: 10px;
 }
 
-.box{
-    padding:30px 50px;
+
+.inputbox{
+    margin:20px;
+    padding:15px;
     background-color: white;
-    color: black;
+    border-radius: 10px;
 }
+
+
+.titlebox{
+    background-color:#E7E7FF;
+    color: #888BFF;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.imagesubmit::-webkit-file-upload-button{
+    background-color: #888BFF;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+}
+
 .submitbutton{
     background-color:#E7E7FF;
     color: #888BFF;
 }
+
+.select2-container .select2-selection--single{
+    height:40px !important;
+}
+.select2-container--default .select2-selection--single{
+         border:1px solid #d9dee3 !important;
+         border-radius: 6px !important; 
+
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color:#697a8d !important;
+}
+
+/* .adminfont{
+    font-size:20px;
+    align-items: center;
+}
+
 
 .imagesubmit::-webkit-file-upload-button{
     background-color: #888BFF;
@@ -30,11 +63,5 @@
 .data{
     font-size: 15px;
      align-items: center;
-}
+} */
 
-.subbox{
-    background-color:#E7E7FF;
-    color: #888BFF;
-    border-radius: 10px;
-    font-size: 20px;
-}
