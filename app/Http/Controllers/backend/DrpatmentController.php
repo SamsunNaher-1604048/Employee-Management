@@ -28,8 +28,6 @@ class DrpatmentController extends Controller
         $department->head_of_dep = $req->head_of_dep;
         $department->save();
         return redirect()->route('department.show');
-
-       
     }
 
     function showdepartment(){
@@ -41,7 +39,7 @@ class DrpatmentController extends Controller
         $department = Department::find($id);
         $companys = Company::select('name')->where('status', 1)->get();
         $employees = Employee::select('name')->where('status',1)->where('designation','1')->get();
-        
+
         return view('backend.pages.editdepartment',['data'=>$department,'companys'=>$companys,'employees'=>$employees]);
     }
 
@@ -57,7 +55,6 @@ class DrpatmentController extends Controller
         return redirect()->route('department.show');
 
     }
-
 
 
 }
