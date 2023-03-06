@@ -5,6 +5,7 @@ use App\Http\Controllers\frontend\LoginController;
 use App\Http\Controllers\frontend\RegistationController;
 use  App\Http\Controllers\frontend\UserProfile;
 use  App\Http\Controllers\frontend\UpdatepasswordController;
+use  App\Http\Controllers\backend\LeaveapplyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,9 @@ Route::post('/update/password',[UpdatepasswordController::class,'updatepassword'
 
 //user profile
 Route::get('/profile/{id}',[UserProfile::class,'showprofile'])->name('profile.show');
+
+//leave apply
+Route::post('/leave_apply',[LeaveapplyController::class,'storeleave'])->name('leave.store');
 
 
 

@@ -38,7 +38,7 @@ class DrpatmentController extends Controller
     function editdepartment($id){
         $department = Department::find($id);
         $companys = Company::select('name')->where('status', 1)->get();
-        $employees = Employee::select('name')->where('status',1)->where('designation','1')->get();
+        $employees = Employee::select('name')->where('status',1)->where('designation','=','Head of the Department')->get();
 
         return view('backend.pages.editdepartment',['data'=>$department,'companys'=>$companys,'employees'=>$employees]);
     }
