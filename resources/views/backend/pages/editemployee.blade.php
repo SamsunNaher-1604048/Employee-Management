@@ -86,7 +86,21 @@
                 </div>
             </div>
 
-            {{-- button --}}
+            {{-- Reporting boss --}}
+            <div class="row mt-4 ">
+                <div class="col-md-6 col-sm-12">
+                    <label for="repoting_boss">Enter Employee Reporting boss:</label><br>
+                    <select class="form-control" name="repoting_boss" id="select4">
+                        @foreach ($rep_boss as $rep)
+                            <option>{{$rep->name}}</option> 
+                       @endforeach
+                            <option>No Repoting Boss</option>
+                     </select>
+                </div>
+            </div>
+
+
+            {{-- image and cv and button --}}
             <div class="mt-4">
                 <div class="row">
                     <div class="col-md-6 col-12">

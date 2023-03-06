@@ -73,8 +73,9 @@
                 <div class="col-md-6 col-sm-12">
                     <label for="designation">Enter Employee Designation:</label><br>
                     <select class="form-select" aria-label="Default select example" name="designation">
-                        <option selected value="1">Head of the Department</option>
-                        <option value="2">Employee</option>
+                        <option selected value="Head of the Department">Head of the Department</option>
+                        <option value="Employee">Employee</option>
+                        <option value="HR">HR</option>
                     </select>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -84,6 +85,25 @@
                         <option value="2">inactive</option>
                     </select>
                 </div>
+            </div>
+
+            <div class="row mt-3">
+                
+                <div class="col-md-6 col-sm-12">
+                    <label for="repoting_boss">Enter Employee Reporting boss:</label><br>
+                    <select class="form-control" name="repoting_boss" id="select4">
+                        @foreach ($rep_boss as $rep)
+                            <option>{{$rep->name}}</option> 
+                       @endforeach
+                            <option>No Repoting Boss</option>
+                     </select>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <label for="status">Enter Employee password:</label><br>
+                    <input type="password" name="password" class="form-control"  required>
+                </div>
+
             </div>
 
             {{-- button --}}
@@ -113,6 +133,7 @@
 <script>
     $('#select2').select2();
     $('#select3').select2();
+    $('#select4').select2()
 </script>
 
 
