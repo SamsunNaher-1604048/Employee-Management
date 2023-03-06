@@ -64,7 +64,9 @@
                   </button>
                 </li>
                 <li class="nav-item m-3">
-                  <a class="nav-link active" href=" ">Leave Apply</a>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#leaveapply">
+                   Apply Leave
+                  </button>
                 </li>
             </ul>
           </div>
@@ -78,4 +80,5 @@
 <!-- edit password model-->
  @include('frontend.pages.editpassword')
 
+ @include('frontend.pages.leavefrom')
 @endsection
