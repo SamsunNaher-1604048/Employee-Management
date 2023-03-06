@@ -1,4 +1,4 @@
-@extends('frontend.layouts.layout');
+@extends('frontend.layouts.layout')
 @section('content')
 <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class LoginController extends Controller
 {
     function userlogin(){
@@ -22,7 +23,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             if(Auth::user()->type == "user"){
-                return "successfull";
+                return redirect()->route('profile.show',Auth::user()->employee_id);
             }
             else{
                 return redirect()->route('user.login');
@@ -32,5 +33,10 @@ class LoginController extends Controller
             return redirect()->route('user.login');
         }
  
+    }
+
+    function logout(){
+        Auth::logout();
+        return redirect()->route('user.login');
     }
 }

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Department;
 use App\Models\Company;
 use App\Models\Employee;
+use App\Models\User;
+use Hash;
 
 
 class EmployeeController extends Controller
@@ -14,12 +16,14 @@ class EmployeeController extends Controller
     function createmployee(){
         $departments = Department::select('name')->where('status',1)->get();
         $companys = Company::select('name')->where('status',1)->get();
-        return view('backend.pages.createmployee',['departments'=>$departments ,"companys"=>$companys]);
+        $rep_boss = Employee::select('name')->where('status',1)->get();
+        return view('backend.pages.createmployee',['departments'=>$departments ,"companys"=>$companys ,'rep_boss'=>$rep_boss]);
     }
 
     function stortemployee(Request $req){
         $employee = new Employee;
 
+        // for employee table
         $employee->employee_id = $req->employee_id;
         $employee->name = $req->name;
         $employee->email = $req->email;
@@ -30,7 +34,9 @@ class EmployeeController extends Controller
         $employee->department_id = $req->department_id;
         $employee->designation = $req->designation;
         $employee->status = $req->status;
-         
+        $employee->repoting_boss =$req->repoting_boss;
+
+
         // image
         $file = $req->file('profile_pic');
         $orgname = $file->getClientOriginalName();
@@ -46,6 +52,16 @@ class EmployeeController extends Controller
         $employee->cv = $path.$orgname;
 
         $employee->save();
+
+        // for user table
+        $user = new User;
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->employee_id = $req->employee_id;
+        $user->password = Hash::make($req->password);
+        $user->save();
+
+
         return redirect()->route('employee.show');
 
         
@@ -60,7 +76,8 @@ class EmployeeController extends Controller
         $employee = Employee::find($id);
         $departments = Department::select('name')->where('status',1)->get();
         $companys = Company::select('name')->where('status',1)->get();
-        return view('backend.pages.editemployee',['data'=>$employee,'departments'=>$departments,'companys'=>$companys]);
+        $rep_boss = Employee::select('name')->where('status',1)->where('id','!=',$id)->get();
+        return view('backend.pages.editemployee',['data'=>$employee,'departments'=>$departments,'companys'=>$companys,'rep_boss'=>$rep_boss]);
     }
 
     

@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('department_id');
             $table->string('company_id');
             $table->string('designation');
+            $table->string('repoting_boss')->default('No Repoting boss');
+            $table->string('leave')->default(20);
             $table->string('status');
             $table->timestamps();
         });
