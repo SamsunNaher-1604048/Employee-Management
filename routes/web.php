@@ -7,6 +7,7 @@ use  App\Http\Controllers\frontend\UserProfile;
 use  App\Http\Controllers\frontend\UpdatepasswordController;
 use  App\Http\Controllers\frontend\LeaveapplyController;
 use  App\Http\Controllers\frontend\NotificationController;
+use  App\Http\Controllers\frontend\LeaveapplicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,10 +35,9 @@ Route::get('/profile/{id}',[UserProfile::class,'showprofile'])->name('profile.sh
 Route::post('/leave_apply',[LeaveapplyController::class,'storeleave'])->name('leave.store');
 
 
-//notification part
-Route::get('/notification',[NotificationController::class,'shownotification'])->name('notification.show');
-Route::post('/notification/update/{id}',[NotificationController::class,'updateNotificationReporting'])->name('reporting.notification.update');
-Route::post('/notification/update/{id}',[NotificationController::class,'updateNotificationDepartment'])->name('department.notification.update');
+//leave-application
+Route::post('/leave-application',[LeaveapplicationController::class,'showapplication'])->name('application.show');
+
 
 
 

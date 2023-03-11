@@ -6,7 +6,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form action="{{route('leave.store')}}" method="post">
+            <form action="{{route('application.show')}}" method="post">
                 @csrf
                 <div class="col-12 mt-3">
                     <label for="leave_day">Enter Total Leave Day</label>
@@ -34,6 +34,7 @@
                         <option value="Personal">Personal</option>
                         <option value="Sick">Sick</option>
                         <option value="Planned">Planned</option>
+                        <option value="In-Lieu-of">In Lieu of</option>
                         <option value="Vacation">Vacation</option>
                         <option value="Maternity">Maternity</option>
                         <option value="other">Other</option>
@@ -46,7 +47,7 @@
                 </div>
 
                 <div class="mt-3">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Show Application</button>
                 </div>
             </form>
         </div>

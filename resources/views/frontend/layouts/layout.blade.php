@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
     <link rel="stylesheet" href="{{asset('frontend/assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{asset('frontend/assets/css/demo.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/css/index.css')}}"/>
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
