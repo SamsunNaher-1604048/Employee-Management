@@ -1,81 +1,29 @@
-.box{
-    border-bottom: 2px solid  #888BFF;
-    margin: 10px;
+.text{
+    width: 300px;
+    height: 100px;
+    padding-left:100px;
+    padding-right: 100px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    margin-right: 40px;
 }
 
-
-.inputbox{
-    margin:20px;
-    padding:15px;
+.application{
     background-color: white;
-    border-radius: 10px;
+    color: black;
 }
 
-
-.titlebox{
-    background-color:#E7E7FF;
-    color: #888BFF;
+.title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.subtitle{
+    text-align: center;
     font-size: 20px;
-    border-radius: 10px;
+    font-weight: bold;
 }
-
-.imagesubmit::-webkit-file-upload-button{
-    background-color: #888BFF;
-    color: white;
-    border: none;
-    height: 40px;
-    width: 140px;
-    border-radius: 20px;
+th,tr,td{
+    color: black !important;
 }
-
-.submitbutton{
-    background-color:#E7E7FF;
-    color: #888BFF;
-}
-
-.select2-container .select2-selection--single{
-    height:40px !important;
-}
-.select2-container--default .select2-selection--single{
-         border:1px solid #d9dee3 !important;
-         border-radius: 6px !important; 
-
-}
-
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    color:#697a8d !important;
-}
-
-.dashboard_box{
-    background-color:#E7E7FF;
-    color: #888BFF;
-    border-radius: 10px;
-    border: 1px solid #888BFF ;
-}
-
-.dashboard_text{
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    font-size: 20px;
-}
-
-/* .adminfont{
-    font-size:20px;
-    align-items: center;
-}
-
-
-.imagesubmit::-webkit-file-upload-button{
-    background-color: #888BFF;
-    color: white;
-    border: none;
-    height: 40px;
-    width: 140px;
-    border-radius: 20px;
-}
-.data{
-    font-size: 15px;
-     align-items: center;
-} */
 
