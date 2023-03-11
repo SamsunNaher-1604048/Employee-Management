@@ -5,7 +5,8 @@ use App\Http\Controllers\frontend\LoginController;
 use App\Http\Controllers\frontend\RegistationController;
 use  App\Http\Controllers\frontend\UserProfile;
 use  App\Http\Controllers\frontend\UpdatepasswordController;
-use  App\Http\Controllers\backend\LeaveapplyController;
+use  App\Http\Controllers\frontend\LeaveapplyController;
+use  App\Http\Controllers\frontend\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,6 @@ use  App\Http\Controllers\backend\LeaveapplyController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
-
 
 //login
 Route::get('/',[LoginController::class,'userlogin'])->name('user.login');
@@ -34,6 +32,13 @@ Route::get('/profile/{id}',[UserProfile::class,'showprofile'])->name('profile.sh
 
 //leave apply
 Route::post('/leave_apply',[LeaveapplyController::class,'storeleave'])->name('leave.store');
+
+
+//notification part
+Route::get('/notification',[NotificationController::class,'shownotification'])->name('notification.show');
+Route::post('/notification/update/{id}',[NotificationController::class,'updateNotificationReporting'])->name('reporting.notification.update');
+Route::post('/notification/update/{id}',[NotificationController::class,'updateNotificationDepartment'])->name('department.notification.update');
+
 
 
 

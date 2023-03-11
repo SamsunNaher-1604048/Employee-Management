@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\backend;
+namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -33,7 +33,8 @@ class LeaveapplyController extends Controller
         $leave_apply->resone =$req->resone;
 
 
-        $leave_approve->leave_id = $employee->employee_id;
+        $leave_approve->employee_id= $employee->employee_id;
+        $leave_approve->resone =$req->resone;
         $leave_approve->reporting_boss = $employee->repoting_boss;
         $leave_approve->department_head = $department_head->head_of_dep;
         $leave_approve->hr = $hr->name;
