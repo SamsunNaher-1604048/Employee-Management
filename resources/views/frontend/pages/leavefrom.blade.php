@@ -37,7 +37,7 @@
                         <option value="In-Lieu-of">In Lieu of</option>
                         <option value="Vacation">Vacation</option>
                         <option value="Maternity">Maternity</option>
-                        <option value="other">Other</option>
+                        <option value="Other">Other</option>
                       </select>
                 </div>
 

@@ -27,3 +27,42 @@ th,tr,td{
     color: black !important;
 }
 
+/* .profile-box{
+    background: #E7E7FF;
+    border: 1px solid #888BFF;
+    border-radius: 10px;
+} */
+.profile-box{
+    background-color: white;
+    padding: 50px; 
+    border-radius: 10px;
+    box-shadow: 5px 10px #888BFF;
+}
+
+.profile-title{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom:-5px;
+    font-weight: bold;
+}
+
+.profile-subtitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-data{
+    margin-left:20px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.profile-data-title{
+ text-align: left;
+   font-size: 22px;
+   font-weight: bold;
+}
+img {
+    border-radius: 50%;
+  }
