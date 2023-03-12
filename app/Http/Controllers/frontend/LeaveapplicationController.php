@@ -11,7 +11,6 @@ class LeaveapplicationController extends Controller
 {
     function showapplication(Request $req){
 
-
          $employee = Employee::select('*')->where('employee_id', Auth::user()->employee_id)->first();
          return view ('frontend.pages.applicationfrom',['data'=>$req,'employee'=>$employee]);
     }

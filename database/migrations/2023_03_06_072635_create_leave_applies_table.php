@@ -13,11 +13,7 @@ return new class extends Migration
     {
         Schema::create('leave_applies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('employee_id');
-            $table->string('designation');
-            $table->string('department_id');
-            $table->string('repoting_boss');
             $table->integer('leave_day');
             $table->date('from_date');
             $table->date('to_date');
